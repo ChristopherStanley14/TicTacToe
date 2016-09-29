@@ -1,5 +1,5 @@
 <html>
- 
+
 <head>
     <title>Tic Tac Toe</title>
 
@@ -17,20 +17,43 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 
+    <script type="text/javascript" src="tictactoe.js"></script>
+    <link rel="stylesheet" type="text/css" href="tictactoe.css">
+
 </head>
 
 <body>
 
+
+
+     <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://christopherstanley14.github.io/">Home</a>
+            </div>
+            <ul class="nav navbar-nav">
+
+                <li><a href="https://christopherstanley14.github.io/weatherly/">Weatherly</a></li>
+                <li><a href="https://christopherstanley14.github.io/store-website/">Store Website</a></li>
+                <li><a href="https://christopherstanley14.github.io/Tip-Calculator/">Tip Calculator</a></li>
+                <li><a href="https://christopherstanley14.github.io/Guessing-Game/">Guessing Game</a></li>
+                <li><a href="https://christopherstanley14.github.io/TicTacToe/">Tic Tac Toe</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
     <div class="container">
+
         <div class="row">
             <div class="col-md-2" style="border:solid 3px black; border-radius: 4px; height:150px">
-               
+                <span style="text-align: center; font-size: 30pt">X Wins</span>
             </div>
-            <div class="col-md-4 col-md-push-2" style="border:solid 3px black; border-radius: 4px; height:150px">
-                
+            <div class="col-md-4 col-md-push-2 " style="border:solid 3px black; border-radius: 4px; height:150px">
+
             </div>
             <div class="col-md-2 col-md-push-4" style="border:solid 3px black; border-radius: 4px; height:150px">
-               
+                <span style="text-align: center; font-size: 30pt">O Wins</span>
             </div>
 
         </div>
@@ -38,53 +61,45 @@
         <br />
         <br />
 
-        <div class="row">
-            <div class="col-md-2 col-md-push-4 btn btn-sq" style="background-color:grey; height: 100px; width: 100px; margin: 5px">
+        <center>
+        <div id="board">
+            <table>
+                <tr id="row1">
+                    <td id="1" class="square ht vl"></td>
+                    <td id="2" class="square ht"></td>
+                    <td id="3" class="square ht vr"></td>
+                </tr>
 
-            </div>
-            <div class="col-md-2 col-md-push-4 btn btn-sq" style="background-color:grey; height: 100px; width: 100px; margin: 5px">
-                
-            </div>
-            <div class="col-md-2 col-md-push-4 btn btn-sq" style="background-color:grey; height: 100px; width: 100px; margin: 5px">
-                
-            </div>
+                 <tr id="row2">
+                    <td id="4" class="square vl"></td>
+                    <td id="5" class="square"></td>
+                    <td id="6" class="square vr"></td>
+                </tr>
 
-        </div>
+                 <tr id="row3">
+                    <td id="7" class="square hb vl"></td>
+                    <td id="8" class="square hb"></td>
+                    <td id="9" class="square hb vr"></td>
+                </tr>
+            </table>
+            </center>
 
-      
-        <div class="row">
-            <div class="col-md-2 col-md-push-4 btn btn-sq" style="background-color:grey; height: 100px; width: 100px; margin: 5px">
 
-            </div>
-            <div class="col-md-2 col-md-push-4 btn btn-sq" style="background-color:grey; height: 100px; width: 100px; margin: 5px">
-                
-            </div>
-            <div class="col-md-2 col-md-push-4 btn btn-sq" style="background-color:grey; height: 100px; width: 100px; margin: 5px">
-                
-            </div>
 
-        </div>
 
-        <div class="row">
-            <div class="col-md-2 col-md-push-4 btn btn-sq" style="background-color:grey; height: 100px; width: 100px; margin: 5px">
 
-            </div>
-            <div class="col-md-2 col-md-push-4 btn btn-sq" style="background-color:grey; height: 100px; width: 100px; margin: 5px">
-                
-            </div>
-            <div class="col-md-2 col-md-push-4 btn btn-sq" style="background-color:grey; height: 100px; width: 100px; margin: 5px">
-                
-            </div>
 
         </div>
 
         <br />
         <br />
 
+
+        <!-- Start Over Button -->
         <div class="col-md-2 col-md-push-5 btn btn-danger" style="background-color: grey; height: 50px">
             <span style="font-size: 20pt">Start Over</span>
         </div>
-        
+
 
     </div>
 

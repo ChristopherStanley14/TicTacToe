@@ -1,0 +1,22 @@
+.square {
+    border: solid black 3px;
+    color: black;
+    height: 100px;
+    width: 100px;
+}
+
+.ht {
+    border-top: white;
+}
+
+.vl {
+    border-left: white;
+}
+
+.vr {
+    border-right: white;
+}
+
+.hb {
+    border-bottom: white;
+}
