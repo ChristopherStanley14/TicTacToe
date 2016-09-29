@@ -1,53 +1,92 @@
 // Setup Game
 
-
-$(function() {
-    $("#btnX1").hide();
-    $("#btnO1").hide();
-    $("#btn1").show();
-   
-    $("#btnX2").hide();
-    $("#btnO2").hide();
-    $("#btn2").show();
-   
-    $("#btnX3").hide();
-    $("#btnO3").hide();
-    $("#btn3").show();
-   
-    $("#btnX4").hide();
-    $("#btnO4").hide();
-    $("#btn4").show();
-   
-    $("#btnX5").hide();
-    $("#btnO5").hide();
-    $("#btn5").show();
-   
-    $("#btnX6").hide();
-    $("#btnO6").hide();
-    $("#btn6").show();
-  
-    $("#btnX7").hide();
-    $("#btnO7").hide();
-    $("#btn7").show();
-   
-    $("#btnX8").hide();
-    $("#btnO8").hide();
-    $("#btn8").show();
-    
-    $("#btnX9").hide();
-    $("#btnO9").hide();
-    $("#btn9").show();
-
-    startUp();
+$(function () {
+    $("#turn").html("X's Turn!");
+    var turnCount = 0;
+    var xWins = 0;
+    var oWins = 0;
+    $("#xWins").html(xWins);
+    $("#oWins").html(oWins);
+    $("#board").find("td").on("click", function () {
+        if (turnCount % 2 === 0) {
+            $(this).text("X");
+            $("#turn").html("O's Turn!");
+            victory("X");
+        }
+        else {
+            $(this).text("O");
+            $("#turn").html("X's Turn!");
+            victory("O");
+        }
+        turnCount++;
+    });
 });
 
 
+function victory(player) {
+    // check top row
+    if ($("#board").find("#1").text() !== "") {
+        if ($("#board").find("#1").text() == $("#board").find("#2").text()) {
+            if ($("#board").find("#1").text() == $("#board").find("#3").text()) {
+                alert(player + " Wins!");
+            }
+        }
 
+        // check 1st col
+        if ($("#board").find("#1").text() == $("#board").find("#4").text()) {
+            if ($("#board").find("#1").text() == $("#board").find("#7").text()) {
+                alert(player + " Wins!");
+            }
+        }
 
+        // check left diagonal
+        if ($("#board").find("#1").text() == $("#board").find("#5").text()) {
+            if ($("#board").find("#1").text() == $("#board").find("#9").text()) {
+                alert(player + " Wins!");
+            }
+        }
+    }
+    // check 2nd col
+    if ($("#board").find("#2").text() !== "") {
+        if ($("#board").find("#2").text() == $("#board").find("#5").text()) {
+            if ($("#board").find("#2").text() == $("#board").find("#8").text()) {
+                alert(player + " Wins!");
+            }
+        }
+    }
+    // check 3rd col
+    if ($("#board").find("#3").text() !== "") {
+        if ($("#board").find("#3").text() == $("#board").find("#6").text()) {
+            if ($("#board").find("#1").text() == $("#board").find("#9").text()) {
+                alert(player + " Wins!");
+            }
+        }
+        // check right diagonal
+        if ($("#board").find("#3").text() == $("#board").find("#5").text()) {
+            if ($("#board").find("#3").text() == $("#board").find("#7").text()) {
+                alert(player + " Wins!");
 
-function player2() {
-   
-};
+            }
+        }
+    }
+        // check middle row
+        if ($("#board").find("#4").text() !== "") {
+            if ($("#board").find("#4").text() == $("#board").find("#5").text()) {
+                if ($("#board").find("#4").text() == $("#board").find("#6").text()) {
+                    alert(player + " Wins!");
+                }
+            }
+        }
+        // check bottom row
+        if ($("#board").find("#7").text() !== "") {
+            if ($("#board").find("#7").text() == $("#board").find("#8").text()) {
+                if ($("#board").find("#7").text() == $("#board").find("#9").text()) {
+                    alert(player + " Wins!");
+                }
+            }
+        }
+    };
+
 
 
 

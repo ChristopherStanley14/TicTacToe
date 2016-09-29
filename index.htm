@@ -43,29 +43,42 @@
         </div>
     </nav>
 
+    
+    
+    
     <div class="container">
 
+        <!-- X win count -->
         <div class="row">
-            <div class="col-md-2" style="border:solid 3px black; border-radius: 4px; height:150px">
-                <span style="text-align: center; font-size: 30pt">X Wins</span>
+            <div class="col-md-2">
+                <span id="xWin">X Wins</span>
+                <br />
+                <br />
+                <p id="xWins"></p>
             </div>
-            <div class="col-md-4 col-md-push-2 " style="border:solid 3px black; border-radius: 4px; height:150px">
+            
+            <!-- Turn Tracker -->
+            <div class="col-md-4 col-md-push-2 " id="turn" >
 
             </div>
-            <div class="col-md-2 col-md-push-4" style="border:solid 3px black; border-radius: 4px; height:150px">
-                <span style="text-align: center; font-size: 30pt">O Wins</span>
+           
+           <!-- O win count -->
+            <div class="col-md-2 col-md-push-4" >
+                <span id="oWin">O Wins</span>
+                <p id="oWins"></p>
             </div>
 
         </div>
         <br />
         <br />
         <br />
+        <hr />
 
         <center>
         <div id="board">
             <table>
                 <tr id="row1">
-                    <td id="1" class="square ht vl"></td>
+                    <td id="1" class="square ht vl"><a href="#"></a></td>
                     <td id="2" class="square ht"></td>
                     <td id="3" class="square ht vr"></td>
                 </tr>

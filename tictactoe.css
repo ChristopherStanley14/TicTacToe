@@ -1,3 +1,38 @@
+td {
+    font-size: 50pt;
+    text-align: center;
+}
+
+hr {
+    border: 1px solid black;
+}
+
+#turn {
+    font-family: "Comic Sans MS";
+    font-size: 35pt;
+    text-align: center;
+}
+
+#xWin {
+    font-family: "Comic Sans MS";
+    font-size: 25pt;
+    text-align: center;
+}
+
+#oWin {
+    font-family: "Comic Sans MS";
+    font-size: 25pt;
+    text-align: center;
+}
+
+p {
+    font-size: 30pt;
+    text-align: center;
+    padding-right: 40px;
+
+}
+
+
 .square {
     border: solid black 3px;
     color: black;
