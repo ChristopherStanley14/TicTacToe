@@ -35,6 +35,8 @@ function victory(player) {
         if ($("#board").find("#1").text() == $("#board").find("#2").text()) {
             if ($("#board").find("#1").text() == $("#board").find("#3").text()) {
                 alert(player + " Wins!");
+                
+                
             }
         }
 
